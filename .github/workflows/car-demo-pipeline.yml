@@ -22,14 +22,6 @@ jobs:
           distribution: 'temurin'
           server-id: github # Value of the distributionManagement/repository/id field of the pom.xml
           settings-path: ${{ github.workspace }}
-      - uses: s4u/maven-settings-action@v2.3.0
-        with:
-          servers: |
-            [{
-                "id": "github",
-                "username": "vimal-knoldus",
-                "password": "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"
-            }]
       - uses: 'google-github-actions/auth@v1'
         with:
           credentials_json: ${{ secrets.GKE_KEY }}
