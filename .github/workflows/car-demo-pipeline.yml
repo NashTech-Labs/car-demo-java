@@ -10,6 +10,8 @@ jobs:
   setup-build-publish-deploy:
     runs-on: ubuntu-latest
     permissions:
+      contents: read/write
+      packages: read/write
       id-token: write
     steps:
       - uses: actions/checkout@v3
