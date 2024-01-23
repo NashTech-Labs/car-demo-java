@@ -37,6 +37,6 @@ jobs:
 
       - name: Build, Publish, and Deploy
         run: |
-          . apps-deployment-script.sh "us-east1"
+          . apps-deployment-script.sh "us-east1" --skip-auth
         env:
          CUSTOM_TOKEN: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
