@@ -43,7 +43,7 @@ jobs:
       - name: Set up Maven settings
         run: |
           mkdir -p $HOME/.m2
-          echo "<settings><servers><server><id>github</id><username>sgknoldus</username><password>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</password></server></servers></settings>" > $HOME/.m2/settings.xml
+          echo "<settings><servers><server><id>github</id><username>sgknoldus</username><password>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</password></server></servers></settings>" > $HOME/.m2/settings.xml
         #env:
           #GITHUB_USERNAME: ${{ github.actor }}
           
@@ -55,5 +55,5 @@ jobs:
         run: |
           . apps-deployment-script.sh "us-east1" 
         env:
-         CUSTOM_TOKEN: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
+         CUSTOM_TOKEN: ${{ secrets.CUSTOM_GITHUB_TOKEN_PAT }}
          #GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
