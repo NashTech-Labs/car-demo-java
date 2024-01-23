@@ -50,7 +50,8 @@ do
     echo "=========================Deploying common package=================="
     cd common || exit
     mvn -B package --file pom.xml
-    mvn deploy -s $GITHUB_WORKSPACE/settings.xml
+    #mvn deploy -s $GITHUB_WORKSPACE/settings.xml
+    mvn deploy -X
     cd ..;;
 
   # case 2 build and deploy order-service
