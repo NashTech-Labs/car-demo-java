@@ -55,5 +55,5 @@ jobs:
         run: |
           . apps-deployment-script.sh "us-east1" 
         env:
-        # CUSTOM_TOKEN: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
-         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+         CUSTOM_TOKEN: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
+         #GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
