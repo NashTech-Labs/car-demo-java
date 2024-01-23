@@ -37,11 +37,15 @@ jobs:
 
       - name: Debug Information
         run: |
-          #echo "GitHub Token: $CUSTOM_TOKEN"
+          echo "GitHub Token: $CUSTOM_TOKEN"
           env
+      - name: Debug Maven settings
+        run: |
+          cat $HOME/.m2/settings.xml 
+          cat $GITHUB_WORKSPACE/settings.xml
           
       - name: Build, Publish, and Deploy
         run: |
-          . apps-deployment-script.sh "us-east1" --skip-auth
-        #env:
-         #CUSTOM_TOKEN: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
+          . apps-deployment-script.sh "us-east1" 
+        env:
+         CUSTOM_TOKEN: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
