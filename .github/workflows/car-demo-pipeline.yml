@@ -9,10 +9,10 @@ env:
 jobs:
   setup-build-publish-deploy:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write
-      id-token: write
+    #permissions:
+     #contents: read
+      #packages: write
+      #id-token: write
     steps:
       - uses: actions/checkout@v3
       - name: Set up JDK 19
@@ -47,4 +47,5 @@ jobs:
         run: |
           . apps-deployment-script.sh "us-east1" 
         env:
-         CUSTOM_TOKEN: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
+        # CUSTOM_TOKEN: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
+         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
