@@ -206,4 +206,16 @@ find the details here [README.md](databricks%2FREADME.md)
 Documentation
 --
 - Demo session [available](https://harveynashvn-my.sharepoint.com/personal/sushant_gupta_nashtechglobal_com/_layouts/15/stream.aspx?id=%2Fpersonal%2Fsushant%5Fgupta%5Fnashtechglobal%5Fcom%2FDocuments%2FJava%2Dcompetency%2Dartifacts%2Dinternal%2Dproject%2FRecordings%2Fdemo%5F%20automobile%20eCommerce%20platform%2D20231206%5F142041%2DMeeting%20Recording%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview&isSPOFile=1&OR=Teams%2DHL&CT=1705060735545&clickparams=eyJBcHBOYW1lIjoiVGVhbXMtRGVza3RvcCIsIkFwcFZlcnNpb24iOiI0OS8yMzExMzAyODcyMCIsIkhhc0ZlZGVyYXRlZFVzZXIiOmZhbHNlfQ%3D%3D)
-- Demo Presentation [available](https://github.com/NashTech-Labs/car-demo/blob/main/documentation/automobile%20ecommerce-platform.pptx) 
+- Demo Presentation [available](https://github.com/NashTech-Labs/car-demo/blob/main/documentation/automobile%20ecommerce-platform.pptx)
+
+How to merge a feature
+--
+- Create a branch from main branch and name it based on the feature to be implemented
+- Implement feature in new feature branch
+- Raise a PR against the main branch
+- Get it approved from Approver and merge the feature branch to master
+
+Next Features to be implemented
+--
+- OAuth Integration with social login
+- GRPC Case study
