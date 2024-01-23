@@ -16,9 +16,9 @@ build_and_deploy_service(){
    if [  $SERVICE_NAME != "car-ui" ]; then
       # mvn verify sonar:sonar
        # mvn verify sonar:sonar -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=nashtech
-       #mvn clean install  -s $GITHUB_WORKSPACE/settings.xml
+       mvn clean install  -s $GITHUB_WORKSPACE/settings.xml
        #mvn clean install
-       mvn clean install  -s $HOME/.m2/settings.xml
+       #mvn clean install  -s $HOME/.m2/settings.xml
    fi
    echo "---------packaging done, start docker build-----------"
    docker build -f Dockerfile --tag gcr.io/"$PROJECT_ID"/"$SERVICE_NAME":"$GITHUB_SHA" .
