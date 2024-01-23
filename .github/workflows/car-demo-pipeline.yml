@@ -35,6 +35,11 @@ jobs:
         run: |-
           gcloud --quiet auth configure-docker
 
+      - name: Debug Information
+        run: |
+          echo "GitHub Token: $CUSTOM_TOKEN"
+          env
+          
       - name: Build, Publish, and Deploy
         run: |
           . apps-deployment-script.sh "us-east1" --skip-auth
