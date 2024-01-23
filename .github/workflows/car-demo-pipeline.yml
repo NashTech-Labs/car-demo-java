@@ -37,11 +37,11 @@ jobs:
 
       - name: Debug Information
         run: |
-          echo "GitHub Token: $CUSTOM_TOKEN"
+          #echo "GitHub Token: $CUSTOM_TOKEN"
           env
           
       - name: Build, Publish, and Deploy
         run: |
           . apps-deployment-script.sh "us-east1" --skip-auth
-        env:
-         CUSTOM_TOKEN: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
+        #env:
+         #CUSTOM_TOKEN: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
