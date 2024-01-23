@@ -39,9 +39,17 @@ jobs:
         run: |
           echo "GitHub Token: $CUSTOM_TOKEN"
           env
+      
+      - name: Set up Maven settings
+        run: |
+          mkdir -p $HOME/.m2
+          echo "<settings><servers><server><id>github</id><username>abidknashtech</username><password>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</password></server></servers></settings>" > $HOME/.m2/settings.xml
+        #env:
+          #GITHUB_USERNAME: ${{ github.actor }}
+          
       - name: Debug Maven settings
         run: |
-          cat $GITHUB_WORKSPACE/settings.xml
+          cat $HOME/.m2/settings.xml
           
       - name: Build, Publish, and Deploy
         run: |
