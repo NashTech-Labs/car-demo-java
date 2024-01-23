@@ -41,7 +41,6 @@ jobs:
           env
       - name: Debug Maven settings
         run: |
-          cat $HOME/.m2/settings.xml 
           cat $GITHUB_WORKSPACE/settings.xml
           
       - name: Build, Publish, and Deploy
