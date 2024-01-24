@@ -21,7 +21,7 @@
         </repository>
         <repository>
             <id>github</id>
-            <url>https://maven.pkg.github.com/NashTech-Labs/car-demo</url>
+            <url>https://maven.pkg.github.com/NashTech-Labs/car-demo-java</url>
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
@@ -32,7 +32,7 @@
         <repository>
             <id>github</id>
             <name>NashTech-Labs</name>
-            <url>https://maven.pkg.github.com/NashTech-Labs/car-demo</url>
+            <url>https://maven.pkg.github.com/NashTech-Labs/car-demo-java</url>
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
