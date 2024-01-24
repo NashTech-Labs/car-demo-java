@@ -1,4 +1,4 @@
-name: car-demo-common-service
+name: GCP Pipeline
 
 on:
   push:
@@ -7,6 +7,23 @@ env:
   PROJECT_ID: ${{ secrets.GKE_PROJECT }}
 
 jobs:
+  sonarcloud:
+    name: SonarCloud
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up JDK 19
+        uses: actions/setup-java@v3
+        with:
+          java-version: '19'
+          distribution: 'temurin'
+          cache: maven
+      - name: SonarCloud Scan
+        working-directory: shipment-service
+        run: mvn clean verify sonar:sonar -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=nashtech -Dsonar.projectKey=shipment-service
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
   setup-build-publish-deploy:
     runs-on: ubuntu-latest
     permissions:
@@ -34,22 +51,8 @@ jobs:
       - name: configure docker
         run: |-
           gcloud --quiet auth configure-docker
-
-      - name: Debug Information
-        run: |
-          cat $GITHUB_WORKSPACE/settings.xml
-          env
-     
-
-
-      - name: Display Actor and Token
-        run: |
-          echo "GITHUB_ACTOR: $GITHUB_ACTOR"
-          echo "GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}"
-          
       - name: Build, Publish, and Deploy
         run: |
-          . apps-deployment-script.sh "us-east1" 
+         # . apps-deployment-script.sh "us-east1" 
         env:
-         #CUSTOM_TOKEN: ${{ secrets.CUSTOM_GITHUB_TOKEN_PAT }}
          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
