@@ -16,8 +16,8 @@ build_and_deploy_service(){
    if [  $SERVICE_NAME != "car-ui" ]; then
       # mvn verify sonar:sonar
        # mvn verify sonar:sonar -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=nashtech
-       #mvn clean install -s $GITHUB_WORKSPACE/settings.xml -X
-       mvn clean install -X
+       mvn clean install -s $GITHUB_WORKSPACE/settings.xml -X
+       #mvn clean install -X
        #mvn clean install  -s $HOME/.m2/settings.xml
    fi
    echo "---------packaging done, start docker build-----------"
@@ -50,8 +50,8 @@ do
     echo "=========================Deploying common package=================="
     cd common || exit
     mvn -B package --file pom.xml
-    #mvn deploy -s $GITHUB_WORKSPACE/settings.xml
-    mvn deploy -X -s $HOME/.m2/settings.xml
+    mvn deploy -X -s $GITHUB_WORKSPACE/settings.xml
+    #mvn deploy -X -s $HOME/.m2/settings.xml
     cd ..;;
 
   # case 2 build and deploy order-service
