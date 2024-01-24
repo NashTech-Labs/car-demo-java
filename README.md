@@ -1,5 +1,5 @@
 [![car-demo-common-service](https://github.com/NashTech-Labs/car-demo/actions/workflows/service-pipeline.yml/badge.svg)](https://github.com/NashTech-Labs/car-demo/actions/workflows/service-pipeline.yml)
-# Car Demo
+# Car Demo Project
 We are developing an eCommerce platform dedicated to the sale of cars. Users will have the capability to search for products, place orders through a shopping cart, and complete payments. The platform will also incorporate inventory management for efficient tracking. Additionally, a secure centralized data platform will be established to support data analytics and facilitate the implementation of AI/ML use cases.
 
 Key technical benefits
