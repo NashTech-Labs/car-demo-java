@@ -40,12 +40,7 @@ jobs:
           cat $GITHUB_WORKSPACE/settings.xml
           env
      
-      - name: Set up Maven settings
-        run: |
-          mkdir -p $HOME/.m2
-          echo "<settings><servers><server><id>github</id><username>NashTech-Labs</username><password>$***env.GITHUB_TOKEN***</password></server></servers></settings>" > $HOME/.m2/settings.xml
-        #env:
-          #GITHUB_USERNAME: ${{ github.actor }}
+
 
       - name: Display Actor and Token
         run: |
