@@ -1,5 +1,22 @@
 [![car-demo-common-service](https://github.com/NashTech-Labs/car-demo/actions/workflows/service-pipeline.yml/badge.svg)](https://github.com/NashTech-Labs/car-demo/actions/workflows/service-pipeline.yml)
 # Car Demo
+
+* [About Car Demo](#about-car-demo)
+* [Key technical benefits](#key-technical-benefits)
+* [System functionality](#system-functionality)
+* [Architecture](#architecture)
+* [Get the source code](#get-the-source-code)
+* [Getting Started for Local](#getting-started-for-local)
+* [GCP Infrastructure and Deployment](#gcp-infrastructure-and-deployment)
+  * [GCP Infrastructure by using Terraform](#gcp-infrastructure-by-using-terraform)
+  * [Deploy Services via Github Action](#deploy-services-via-github-action)
+* [Data Analytics and Visualization](#data-analytics-and-visualization)
+* [Documentation](#documentation)
+* [How to merge a feature](#how-to-merge-a-feature)
+* [Next Features to be implemented](#next-features-to-be-implemented)
+
+
+# About Car Demo
 We are developing an eCommerce platform dedicated to the sale of cars. Users will have the capability to search for products, place orders through a shopping cart, and complete payments. The platform will also incorporate inventory management for efficient tracking. Additionally, a secure centralized data platform will be established to support data analytics and facilitate the implementation of AI/ML use cases.
 
 Key technical benefits
@@ -61,12 +78,12 @@ You can include this environment property in IntelliJ by navigating to the upper
 The listed services are operate sequentially.
 
 ***Phase-1***
-- admin-service
-- inventory-service 
+- admin-service [README.md](admin-service/README.md)
+- inventory-service [README.md](inventory-service/README.md)
 - order-service  [README.md](order-service%2FREADME.md) 
 - payment-service  [README.md](payment-service/README.md)
-- shipment-service 
-- elasticsearch
+- shipment-service [README.md](shipment-service/README.md)
+- elasticsearch [README.md](elastic-search/README.md)
 
 ***Phase-2***
 - cart-service
