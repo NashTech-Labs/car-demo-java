@@ -10,8 +10,8 @@
     </parent>
 
     <groupId>com.nashtech.common</groupId>
-    <artifactId>common</artifactId>
-    <version>2.3</version>
+    <artifactId>common-lib</artifactId>
+    <version>2.4</version>
     <name>common</name>
 
     <repositories>
